@@ -8,7 +8,6 @@ export const Container = styled.div`
   height: 40px;
   background-color: #e9e3e9;
   bottom: 0;
-  position: fixed;
 
   > span {
     color: #696669;
