@@ -13,6 +13,6 @@ export default createGlobalStyle`
   *, button, input {
     border: 0;
     background: none;
-    font-family: "Aktiv Grotesk", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 `;
