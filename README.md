@@ -1,44 +1,121 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pokémon Game Generations
 
-## Available Scripts
+All the instructions, architecture and decisions about the project can be found below.
 
-In the project directory, you can run:
+## Language and Framework
 
-### `yarn start`
+Following the challenge recommendation, it was used JavaScript and its framework, React.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **TypeScript**: it types the code at runtime
+- **Styled Components**: it optimizes the styling experience for React components.
+- **Axios**: used to access APIs, it gives you the ability to take advantage of JavaScript's _async_ and _await_ for more readable asynchronous code.
 
-### `yarn test`
+## Architecture
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project architecture was created in order to support its growth and keep it organized.
 
-### `yarn build`
+**Project Tree**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+├── public
+│  ├── favicon.ico
+│  ├── index.html
+│  ├── manifest.json
+│  └── robots.txt
+├── src
+│  ├── assets
+│  │  └── images
+│  │  │  ├── generation-eight.jpg
+│  │  │  ├── generation-five.jpg
+│  │  │  ├── generation-four.jpg
+│  │  │  ├── generation-one.jpg
+│  │  │  ├── generation-seven.png
+│  │  │  ├── generation-six.png
+│  │  │  ├── generation-three.jpg
+│  │  │  ├── generation-two.png
+│  │  │  ├── index.ts
+│  │  │  ├── logo.png
+│  │  │  ├── pokeball.png
+│  │  │  └── pokedex.png
+│  ├── components
+│  │  ├── BackButton
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  ├── Footer
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  ├── Header
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  ├── Layout
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  ├── List
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  ├── Main
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  │  └── Pokemon
+│  │  │  ├── index.tsx
+│  │  │  └── styles.ts
+│  ├── helpers
+│  │  └── index.ts
+│  ├── services
+│  │  └── api.ts
+│  ├── styles
+│  │  └── GlobalStyles.ts
+│  ├── App.tsx
+│  ├── index.tsx
+│  ├── react-app-env.d.ts
+│  └── types.d.ts
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.json
+├── yarn.lock
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+The simplified version of the project tree is described below:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **components**: react components used inside the pages and that can be reusable
+- **helpers**: utility functions
+- **services**: API request
+- **styles**: global styles to be used in the entire application
 
-### `yarn eject`
+The project is visually structured by Layout component state.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The state is controlled by _React Hooks_.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Settings
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You must have Git installed in your machine to download the following GitHub repository:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- https://github.com/danielejsantos/pokemon-game-generations
 
-## Learn More
+Or you can download it by following the command:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`git clone https://github.com/danielejsantos/pokemon-game-generations.git`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Then, you must install its dependencies. At the root, run the command:
+
+```
+# with yarn:
+yarn install
+# with npm:
+npm install
+```
+
+## How to run
+
+Navigate to the root folder and run the following command:
+
+```
+# with yarn:
+yarn start
+# with npm:
+npm start
+```
