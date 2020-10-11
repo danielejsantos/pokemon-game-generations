@@ -14,9 +14,24 @@ export const Wrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   row-gap: 50px;
   column-gap: 50px;
+
+  @media (max-width: 970px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
-export const CardWrapper = styled.a`
+export const CardWrapper = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +42,7 @@ export const CardWrapper = styled.a`
   padding: 10px;
   transition: 0.5s;
   cursor: pointer;
-  text-decoration: none;
+  outline: 0;
 
   :hover {
     transform: scale(1.1);
@@ -36,6 +51,7 @@ export const CardWrapper = styled.a`
   span {
     font-size: 16px;
     font-weight: bold;
+    text-transform: uppercase;
   }
 `;
 
