@@ -13,4 +13,8 @@ export const Container = styled.div`
     color: #696669;
     font-size: 13px;
   }
+
+  @media (min-height: 890px) {
+    position: fixed;
+  }
 `;
